@@ -33,9 +33,9 @@ const ContactCard = ({
   };
 
   return (
-    <Card className={cn("max-w-md w-full", className)}>
-      <CardHeader className="flex flex-row items-center gap-4 pb-2">
-        <Avatar className="h-16 w-16">
+    <Card className={cn("max-w-md w-full border-primary/30 shadow-md", className)}>
+      <CardHeader className="flex flex-row items-center gap-4 pb-2 border-b border-primary/20">
+        <Avatar className="h-16 w-16 border-2 border-primary">
           <AvatarImage src={avatarUrl} alt={name} />
           <AvatarFallback className="text-lg bg-primary text-primary-foreground">
             {getInitials(name)}
@@ -46,22 +46,22 @@ const ContactCard = ({
           {position && <p className="text-muted-foreground">{position}</p>}
         </div>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-3 pt-4">
         {phone && (
           <div className="flex items-center gap-3">
-            <Phone className="h-5 w-5 text-muted-foreground" />
+            <Phone className="h-5 w-5 text-primary" />
             <span>{phone}</span>
           </div>
         )}
         {email && (
           <div className="flex items-center gap-3">
-            <Mail className="h-5 w-5 text-muted-foreground" />
+            <Mail className="h-5 w-5 text-primary" />
             <span>{email}</span>
           </div>
         )}
         {address && (
           <div className="flex items-center gap-3">
-            <MapPin className="h-5 w-5 text-muted-foreground" />
+            <MapPin className="h-5 w-5 text-primary" />
             <span>{address}</span>
           </div>
         )}
